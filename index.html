@@ -817,29 +817,75 @@
 		/* scrolled padding */
 		#hero { padding-top: 64px; }
 
-		/* ── RESPONSIVE ── */
+		/* ── RESPONSIVE TABLET ── */
 		@media (max-width: 900px) {
-			#hero { grid-template-columns: 1fr; min-height: auto; }
-			.hero-content { padding: 120px 32px 60px; }
+			.nav-links { display: none; }
+			.nav-cta { font-size: 12px; padding: 7px 14px; }
+			.nav-logo { font-size: 18px; }
+			#hero { grid-template-columns: 1fr; min-height: 100svh; }
 			.hero-image-col { display: none; }
+			.hero-content { padding: 110px 28px 60px; }
+			#hero h1 { font-size: clamp(52px, 14vw, 80px); }
+			.hero-sub { font-size: 16px; }
+			.gear-deco { width: 300px; height: 300px; right: -80px; opacity: 0.05; }
 			.spotlight { grid-template-columns: 1fr; }
-			.spotlight .sp-visual { min-height: 260px; }
+			.spotlight .sp-visual { min-height: 220px; }
+			.spotlight .sp-content { padding: 48px 28px; }
 			.spotlight.orient-right .sp-content,
 			.spotlight.orient-right .sp-visual { order: unset; }
-			.eday-inner { grid-template-columns: 1fr; gap: 48px; }
-			.join-grid { grid-template-columns: 1fr; }
+			.sp-number { font-size: 120px; }
+			.pillars-grid { grid-template-columns: 1fr 1fr; }
+			.pillar { padding: 32px 24px; }
+			section { padding: 72px 0; }
+			.eday-inner { grid-template-columns: 1fr; gap: 40px; }
+			.cog-skull-wrap { width: 260px; height: 260px; }
 			.stats-grid { grid-template-columns: 1fr; }
 			.stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-			.footer-inner { grid-template-columns: 1fr; }
+			.stat-number { font-size: 56px; }
+			.join-grid { grid-template-columns: 1fr; gap: 40px; }
 			.form-row { grid-template-columns: 1fr; }
-			.nav-links { display: none; }
-			.pillars-grid { grid-template-columns: 1fr 1fr; }
+			.footer-inner { grid-template-columns: 1fr; gap: 32px; }
+			.screenshot-strip { grid-template-columns: 1fr; }
 		}
 
+		/* ── RESPONSIVE MOBILE ── */
 		@media (max-width: 540px) {
-			.pillars-grid { grid-template-columns: 1fr; }
-			.container { padding: 0 24px; }
-			.hero-content { padding: 100px 24px 60px; }
+			.nav-inner { padding: 0 20px; }
+			.nav-logo { font-size: 15px; gap: 6px; }
+			.nav-cta { display: none; }
+			.hero-content { padding: 96px 20px 52px; }
+			#hero h1 { font-size: clamp(44px, 16vw, 64px); }
+			.hero-sub { font-size: 14px; letter-spacing: 0.15em; }
+			.hero-desc { font-size: 14px; margin-bottom: 28px; }
+			.btn-group { flex-direction: column; gap: 12px; }
+			.btn-primary, .btn-secondary { text-align: center; padding: 14px 24px; font-size: 14px; }
+			.gear-deco { display: none; }
+			.container { padding: 0 20px; }
+			section { padding: 56px 0; }
+			.spotlight .sp-content { padding: 36px 20px; }
+			.spotlight h2 { font-size: 36px; }
+			.spotlight p { font-size: 15px; }
+			.spotlight .sp-visual { min-height: 180px; }
+			.sp-number { font-size: 90px; }
+			.pillars-grid { grid-template-columns: 1fr; gap: 2px; }
+			.pillar { padding: 28px 20px; }
+			.pillar h3 { font-size: 24px; }
+			.section-header h2 { font-size: 36px; }
+			.section-header { margin-bottom: 40px; }
+			#eday h2 { font-size: 36px; }
+			.eday-features li { font-size: 14px; padding: 10px 0; }
+			.cog-skull-wrap { width: 200px; height: 200px; }
+			.cog-center-text span:first-child { font-size: 48px; }
+			.stat-item { padding: 28px 16px; }
+			.stat-number { font-size: 48px; }
+			.stat-label { font-size: 12px; }
+			#join h2 { font-size: 36px; }
+			.requisitos { padding: 24px 20px; }
+			.req-item { font-size: 14px; }
+			.footer-inner { gap: 24px; }
+			.footer-brand h3 { font-size: 22px; }
+			.footer-bottom { font-size: 12px; }
+			.screenshot-strip { grid-template-columns: 1fr; gap: 2px; }
 		}
 	</style>
 </head>
