@@ -687,25 +687,27 @@
 			background: rgba(255,0,0,0.08);
 			border: 1px solid rgba(255,0,0,0.25);
 			position: relative;
-			overflow: visible !important;
+			overflow: hidden !important;
 		}
 
-		.yt-frame-wrap {
+		.red-card.youtube::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-image: url('podcast-frame.png');
+			background-size: cover;
+			background-position: center top;
+			opacity: 0.18;
+			z-index: 0;
+			pointer-events: none;
+		}
+
+		.red-card.youtube > * {
 			position: relative;
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+			z-index: 1;
 		}
 
-		.yt-frame-img {
-			width: 200px;
-			height: auto;
-			object-fit: contain;
-			display: block;
-			margin: 0 auto 16px;
-			filter: drop-shadow(0 0 20px rgba(88,160,255,0.4));
-		}
+		.yt-frame-img { display: none; }
 
 		.red-card::before {
 			content: '';
@@ -1305,9 +1307,6 @@
 				</div>
 				<span class="red-platform">YouTube</span>
 				<h3 class="red-title">Canal Lords of the Horde</h3>
-				<div class="yt-frame-wrap">
-					<img src="podcast-frame.png" alt="Señores de la Horda — LOTH Podcast" class="yt-frame-img" loading="lazy" />
-				</div>
 				<p class="red-desc">Podcast, momentos épicos y hordas completas. Aprende, ríete y vive la experiencia LOTH desde la primera fila. Suscríbete y no te pierdas ninguna batalla.</p>
 				<span class="red-link">@lordsofthehordeloth</span>
 			</a>
@@ -1452,5 +1451,4 @@
 </footer>
 
 </body>
-</html>
 </html>
